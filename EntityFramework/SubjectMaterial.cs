@@ -7,6 +7,6 @@ namespace EntityFramework
 {
     class SubjectMaterial
     {
-
+        //Blob or Normal DB
     }
 }

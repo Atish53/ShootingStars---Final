@@ -19,7 +19,7 @@ namespace PBDE401___ShootingStars
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.activity_main); //activity main layout
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
@@ -65,6 +65,7 @@ namespace PBDE401___ShootingStars
             return base.OnOptionsItemSelected(item);
         }
 
+        //ChatBot
         private void FabOnClick(object sender, EventArgs eventArgs)
         {
             View view = (View) sender;
@@ -119,3 +120,6 @@ namespace PBDE401___ShootingStars
     }
 }
 
+//Maps
+//Progress
+//ChatBot

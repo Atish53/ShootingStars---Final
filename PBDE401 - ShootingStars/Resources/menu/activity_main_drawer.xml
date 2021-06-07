@@ -34,5 +34,12 @@
           android:title="Send Us Feedback" />
     </menu>
   </item>
+ 
+      <item
+          android:id="@+id/nav_login"
+          android:icon="@drawable/ic_menu_share"
+          android:title="Login" />
+      
+
 
 </menu>

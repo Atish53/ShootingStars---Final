@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework", "EntityFr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PBDE401 - ShootingStars", "PBDE401 - ShootingStars\PBDE401 - ShootingStars.csproj", "{6DD7BC46-4E30-406F-9D8C-FE93900C4D0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrateEntities", "MigrateEntities\MigrateEntities.csproj", "{3C2E583F-1996-483A-80B3-3B7547B024DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{6DD7BC46-4E30-406F-9D8C-FE93900C4D0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DD7BC46-4E30-406F-9D8C-FE93900C4D0A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6DD7BC46-4E30-406F-9D8C-FE93900C4D0A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3C2E583F-1996-483A-80B3-3B7547B024DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C2E583F-1996-483A-80B3-3B7547B024DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C2E583F-1996-483A-80B3-3B7547B024DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C2E583F-1996-483A-80B3-3B7547B024DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

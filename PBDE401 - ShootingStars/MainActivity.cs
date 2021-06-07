@@ -1,6 +1,7 @@
 ﻿using System;
 using Android;
 using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
@@ -11,7 +12,7 @@ using Android.Views;
 
 namespace PBDE401___ShootingStars
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "ShootingStars", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -81,7 +82,7 @@ namespace PBDE401___ShootingStars
             }
             else if (id == Resource.Id.nav_subjects)
             {
-
+                
             }
             else if (id == Resource.Id.nav_planner)
             {
@@ -98,6 +99,11 @@ namespace PBDE401___ShootingStars
             else if (id == Resource.Id.nav_question)
             {
 
+            }
+            else if (id == Resource.Id.nav_login)
+            {
+                Intent loginIntent = new Intent(this, typeof(LoginActivity));
+                StartActivity(loginIntent);
             }
 
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);

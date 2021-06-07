@@ -18,7 +18,7 @@ namespace EntityFramework
 
         public Context(string databasePath)
         {
-
+            DatabasePath = databasePath;
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

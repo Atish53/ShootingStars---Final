@@ -75,27 +75,27 @@ namespace PBDE401___ShootingStars
         {
             int id = item.ItemId;
 
-            if (id == Resource.Id.nav_camera)
+            if (id == Resource.Id.nav_grades)
             {
-                // Handle the camera action
+                // Handle the grades action
             }
-            else if (id == Resource.Id.nav_gallery)
-            {
-
-            }
-            else if (id == Resource.Id.nav_slideshow)
+            else if (id == Resource.Id.nav_subjects)
             {
 
             }
-            else if (id == Resource.Id.nav_manage)
+            else if (id == Resource.Id.nav_planner)
             {
 
             }
-            else if (id == Resource.Id.nav_share)
+            else if (id == Resource.Id.nav_feedback)
             {
 
             }
-            else if (id == Resource.Id.nav_send)
+            else if (id == Resource.Id.nav_additionalresources)
+            {
+
+            }
+            else if (id == Resource.Id.nav_question)
             {
 
             }

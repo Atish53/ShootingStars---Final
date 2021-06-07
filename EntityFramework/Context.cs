@@ -25,6 +25,5 @@ namespace EntityFramework
         {
             optionsBuilder.UseSqlite($"Filename={DatabasePath}");
         }
-
     }
 }

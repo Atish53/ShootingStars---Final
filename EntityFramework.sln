@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework", "EntityFramework\EntityFramework.csproj", "{A7BB30CD-521E-4916-8B13-3C85B562865F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PBDE401 - ShootingStars", "PBDE401 - ShootingStars\PBDE401 - ShootingStars.csproj", "{6DD7BC46-4E30-406F-9D8C-FE93900C4D0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{A7BB30CD-521E-4916-8B13-3C85B562865F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7BB30CD-521E-4916-8B13-3C85B562865F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7BB30CD-521E-4916-8B13-3C85B562865F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DD7BC46-4E30-406F-9D8C-FE93900C4D0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DD7BC46-4E30-406F-9D8C-FE93900C4D0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DD7BC46-4E30-406F-9D8C-FE93900C4D0A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6DD7BC46-4E30-406F-9D8C-FE93900C4D0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DD7BC46-4E30-406F-9D8C-FE93900C4D0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DD7BC46-4E30-406F-9D8C-FE93900C4D0A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

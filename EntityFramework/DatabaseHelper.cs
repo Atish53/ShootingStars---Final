@@ -31,7 +31,6 @@ namespace EntityFramework
             {
                 students = conn.Table<Student>().ToList();
             }
-
             return students;
         }
     }

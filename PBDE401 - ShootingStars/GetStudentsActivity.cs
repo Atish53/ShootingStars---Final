@@ -13,7 +13,7 @@ using System.Text;
 
 namespace PBDE401___ShootingStars
 {
-    [Activity(Label = "GetStudents", MainLauncher = true)]
+    [Activity(Label = "GetStudents")]
     public class GetStudentsActivity : ListActivity
     {
         List<Student> students;

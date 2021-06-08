@@ -12,7 +12,7 @@ using Android.Views;
 
 namespace PBDE401___ShootingStars
 {
-    [Activity(Label = "ShootingStars", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "ShootingStars", Theme = "@style/AppTheme.NoActionBar")]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -83,7 +83,8 @@ namespace PBDE401___ShootingStars
             }
             else if (id == Resource.Id.nav_subjects)
             {
-                
+                Intent StudentIntent = new Intent(this, typeof(StudentActivity));
+                StartActivity(StudentIntent);
             }
             else if (id == Resource.Id.nav_planner)
             {

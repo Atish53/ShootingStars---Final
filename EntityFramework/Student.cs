@@ -1,11 +1,12 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace EntityFramework
 {
     public class Student
     {
-        [Key]
+        [PrimaryKey, AutoIncrement]
         public int StudentID { get; set; }
 
         public string StudentName { get; set; }
@@ -18,5 +19,9 @@ namespace EntityFramework
 
         public string StudentAddress { get; set; }
 
+        public override string ToString()
+        {
+            return string.Format($"{StudentName}" + "\n" + $"{StudentEmail}" + "\n" + $"{StudentPassword}" + "\n" + $"{StudentPhone}" + "\n" + $"{StudentAddress}");
+        }
     }
 }

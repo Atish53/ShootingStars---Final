@@ -101,7 +101,8 @@ namespace PBDE401___ShootingStars
             }
             else if (id == Resource.Id.nav_question)
             {
-
+                Intent GetEmail = new Intent(this, typeof(EmailActivity));
+                StartActivity(GetEmail);
             }
             else if (id == Resource.Id.nav_login)
             {

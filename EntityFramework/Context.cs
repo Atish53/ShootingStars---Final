@@ -8,7 +8,7 @@ namespace EntityFramework
     class Context : DbContext
     {
         public DbSet<Student> Students { get; set; }
-        public DbSet<Queries> Queries { get; set; }
+        public DbSet<Query> Queries { get; set; }
 
         private string DatabasePath { get; set; }
 

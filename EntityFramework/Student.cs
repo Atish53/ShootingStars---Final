@@ -1,5 +1,7 @@
 ﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace EntityFramework
@@ -18,6 +20,9 @@ namespace EntityFramework
         public string StudentPhone { get; set; }
 
         public string StudentAddress { get; set; }
+
+        [OneToMany(CascadeOperations = CascadeOperation.All)]
+        public List<Query> Queries { get; set; }
 
         public override string ToString()
         {

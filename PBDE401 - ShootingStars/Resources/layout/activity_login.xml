@@ -7,10 +7,37 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <TextView
-        android:text="Text"
+        android:text="Login Here"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/testView" />
+        android:id="@+id/textView1" />
+    <TextView
+        android:text="Please enter your student credentials to continue."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+    <TextView
+        android:text="Student Email:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginEmailLabel" />
+    <EditText
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_studentEmail" />
+    <TextView
+        android:text="Student Password:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginPasswordLabel" />
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_studentPassword" />
     <Button
         android:text="Login"
         android:layout_width="match_parent"
@@ -18,5 +45,16 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:id="@+id/login_button" />
+    <TextView
+        android:text="Don't have an account? Register here."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/registerHere" />
+    <Button
+        android:text="Register Here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/registerButtonLogin" />
 
 </LinearLayout>

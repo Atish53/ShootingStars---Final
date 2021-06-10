@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -7,65 +8,75 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.Design.Widget;
 using Android.Views;
 using Android.Widget;
 using EntityFramework;
+using Xamarin.Essentials;
 
 namespace PBDE401___ShootingStars
 {
     [Activity(Label = "LoginActivity")]
     public class LoginActivity : Activity
     {
+        EditText studentEmail, studentPassword;
+        Button registerButtonLogin, loginButton;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_login); //activity main layout
 
+            registerButtonLogin = FindViewById<Button>(Resource.Id.registerButtonLogin);
             // Create your application here
 
-            /* Button button = (Button)FindViewById(Resource.Id.login_button);
+            registerButtonLogin.Click += (sender, e) => {
+               // Perform action on click
+               Intent StudentRegisterIntent = new Intent(this, typeof(RegisterActivity));
+               StartActivity(StudentRegisterIntent);
+            };
 
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+            studentEmail = FindViewById<EditText>(Resource.Id.login_studentEmail);
+            studentPassword = FindViewById<EditText>(Resource.Id.login_studentPassword);
 
-            TextView textView = FindViewById(Resource.Id.testView);
+            string db_name = "students_db.sqlite";
+            string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string db_path = Path.Combine(folderPath, db_name);            
 
-            var dbFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            var fileName = "Context.db";
-            var dbFullPath = Path.Combine(dbFolder, fileName);
-            try
-            {
-                using (var db = new Context(dbFullPath))
+            loginButton = FindViewById<Button>(Resource.Id.login_button);            
+
+            loginButton.Click += (sender, e) => {
+                // Validate Student Credentials
+                if (DatabaseHelper.CheckLogin(db_path, studentEmail.Text, studentPassword.Text) == "Success")
                 {
-                    await db.Database.MigrateAsync(); //We need to ensure the latest Migration was added. This is different than EnsureDatabaseCreated.
+                    Student student = DatabaseHelper.ReadSingle(db_path, studentEmail.Text);
+                    Preferences.Set("LoginState", "True");
+                    Preferences.Set("LoginName", student.StudentName);
+                    Preferences.Set("LoginEmail", student.StudentEmail);
+                    Preferences.Set("LoginPhone", student.StudentPhone);
+                    Preferences.Set("LoginAddress", student.StudentAddress);
 
-                    Student testStudent = new Student() { StudentID = 1, StudentName = "Gary", StudentAddress = "Test123", StudentEmail = "Test@123.net", StudentPassword = "Test123", StudentPhone = "0123456789" };
-                    Student testStudent2 = new Student() { StudentID = 2, StudentName = "SpongeBob", StudentAddress = "Test234", StudentEmail = "Test@234.net", StudentPassword = "Test123", StudentPhone = "0123456789" };
-                    Student testStudent3 = new Student() { StudentID = 3, StudentName = "Patrick", StudentAddress = "Test567", StudentEmail = "Test@567.net", StudentPassword = "Test123", StudentPhone = "0123456789" };
+                    View view = (View)sender;
 
-                    List listStudents = new List() { testStudent, testStudent2, testStudent3 };
+                    Toast.MakeText(Application.Context, "Welcome, " + student.StudentName + ". You've logged in successfully.", ToastLength.Long).Show();
 
-                    if (await db.Students.CountAsync() < 3)
-                    {
-                        await db.Students.AddRangeAsync(listStudents);
-                        await db.SaveChangesAsync();
-                    }
-
-                    var catsInTheBag = await db.Students.ToListAsync();
-
-                    foreach (var student in listStudents)
-                    {
-                        textView.Text += "Success";
-                    }
+                    Intent StudentLoginIntent = new Intent(this, typeof(MainActivity));
+                    StartActivity(StudentLoginIntent);
+                    Finish();
                 }
+                else if (DatabaseHelper.CheckLogin(db_path, studentEmail.Text, studentPassword.Text) == "Invalid")
+                {
+                    View view = (View)sender;
+                    Snackbar.Make(view, "Invalid Password.", Snackbar.LengthLong)
+                        .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
 
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine(ex.ToString());
-            }
-        }
-    }
-}*/
+                }
+                else if (DatabaseHelper.CheckLogin(db_path, studentEmail.Text, studentPassword.Text) == "NotFound")
+                {
+                    View view = (View)sender;
+                    Snackbar.Make(view, "Student Not Found.", Snackbar.LengthLong)
+                        .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
+                }
+            };
         }
     }
 }

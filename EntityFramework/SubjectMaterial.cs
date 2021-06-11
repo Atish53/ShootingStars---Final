@@ -15,10 +15,12 @@ namespace EntityFramework
         public int SubjectMaterialID { get; set; }
 
         [ForeignKey(typeof(Subject))]
-        public int StudentID { get; set; }
+        public int SubjectID { get; set; }
+
+        public string itemName { get; set; }
 
         public byte[] itemData { get; set; }
 
-        public MediaType mediaType { get; set; }
+        public string mediaType { get; set; }
     }
 }

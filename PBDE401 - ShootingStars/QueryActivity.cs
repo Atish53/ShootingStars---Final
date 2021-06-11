@@ -19,7 +19,7 @@ namespace PBDE401___ShootingStars
     [Activity(Label = "QueryActivity")]
     public class QueryActivity : Activity
     {
-        Button queryCreateButton;
+        Button queryCreateButton, queryView;
         ListView mainList;
         List<Query> Queries;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -34,11 +34,25 @@ namespace PBDE401___ShootingStars
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string db_path = Path.Combine(folderPath, db_name);
 
-            Queries = new List<Query>();
-            Queries = DatabaseHelper.ReadQueries(db_path, loginEmail);
+            queryCreateButton = FindViewById<Button>(Resource.Id.create_query);
 
-            
-            
+            queryCreateButton.Click += (sender, e) =>
+            {
+                Intent createQueryIntent = new Intent(this, typeof(CreateQueryActivity));
+                StartActivity(createQueryIntent);
+            };
+
+            queryView = FindViewById<Button>(Resource.Id.view_query);
+
+            queryView.Click += (sender, e) =>
+            {
+                Intent viewQueryIntent = new Intent(this, typeof(ActiveQueriesActivity));
+                StartActivity(viewQueryIntent);
+            };
+
+
+
+
 
         }
     }

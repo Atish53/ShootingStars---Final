@@ -45,8 +45,15 @@ namespace PBDE401___ShootingStars
             loginButton = FindViewById<Button>(Resource.Id.login_button);            
 
             loginButton.Click += (sender, e) => {
+                //Validate Admin Credentials
+                if (studentEmail.Text == "admin" && studentPassword.Text == "admin")
+                {
+                    Intent adminIntent = new Intent(this, typeof(AdminActivity));
+                    StartActivity(adminIntent);
+                    Finish();
+                }
                 // Validate Student Credentials
-                if (DatabaseHelper.CheckLogin(db_path, studentEmail.Text, studentPassword.Text) == "Success")
+                else if (DatabaseHelper.CheckLogin(db_path, studentEmail.Text, studentPassword.Text) == "Success")
                 {
                     Student student = DatabaseHelper.ReadSingle(db_path, studentEmail.Text);
                     Preferences.Set("LoginState", "True");
@@ -76,6 +83,7 @@ namespace PBDE401___ShootingStars
                     Snackbar.Make(view, "Student Not Found.", Snackbar.LengthLong)
                         .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
                 }
+                
             };
         }
     }

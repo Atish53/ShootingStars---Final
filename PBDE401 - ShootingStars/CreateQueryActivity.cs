@@ -25,7 +25,7 @@ namespace PBDE401___ShootingStars
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.activity_create_query); //activity main layout
+            SetContentView(Resource.Layout.activity_create_query); //activity create query layout
 
             // Create your application here
 

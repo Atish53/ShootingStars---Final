@@ -158,8 +158,8 @@ namespace PBDE401___ShootingStars
                 }
                 else if (id == Resource.Id.nav_login)
                 {
-                    Intent loginIntent = new Intent(this, typeof(LoginActivity));
-                    StartActivity(loginIntent);
+                Intent loginIntent = new Intent(this, typeof(LoginActivity));
+                StartActivity(loginIntent);
                 }
 
             }

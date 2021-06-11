@@ -63,15 +63,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActiveQueriesActivity.cs" />
+    <Compile Include="AdminActivity.cs" />
+    <Compile Include="CreateMaterialActivity.cs" />
     <Compile Include="CreateQueryActivity.cs" />
     <Compile Include="GetStudentsActivity.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="ManageMaterialsActivity.cs" />
+    <Compile Include="ManageQueriesActivity.cs" />
+    <Compile Include="ManageQuizActivity.cs" />
     <Compile Include="QueryActivity.cs" />
     <Compile Include="RegisterActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentActivity.cs" />
+    <Compile Include="ViewMaterialsAdmin.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -179,6 +185,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_create_query.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_admin.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_manage_materials.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

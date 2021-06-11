@@ -1,12 +1,24 @@
-﻿using System;
+﻿using Android.Provider;
+using SQLite;
+using SQLiteNetExtensions.Attributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace EntityFramework
 {
-    class SubjectMaterial
+    public class SubjectMaterial
     {
         //Blob or Normal DB
+        [PrimaryKey, AutoIncrement]
+        public int SubjectMaterialID { get; set; }
+
+        [ForeignKey(typeof(Subject))]
+        public int StudentID { get; set; }
+
+        public byte[] itemData { get; set; }
+
+        public MediaType mediaType { get; set; }
     }
 }

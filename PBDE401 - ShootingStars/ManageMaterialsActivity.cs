@@ -18,8 +18,28 @@ namespace PBDE401___ShootingStars
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            SetContentView(Resource.Layout.activity_manage_materials); //activity admin layout
             // Create your application here
+
+            //Add Materials Button
+            Button addMaterials = FindViewById<Button>(Resource.Id.add_materialslink);
+
+            addMaterials.Click += (sender, e) =>
+            {
+                Intent addMaterialsIntent = new Intent(this, typeof(CreateMaterialActivity));
+                StartActivity(addMaterialsIntent);
+            };
+
+            //View Current Materials Button
+            Button viewMaterials = FindViewById<Button>(Resource.Id.view_materialslink);
+
+            viewMaterials.Click += (sender, e) =>
+            {
+                Intent viewMaterialsIntent = new Intent(this, typeof(ViewMaterialsAdmin));
+                StartActivity(viewMaterialsIntent);
+            };
+
+            
         }
     }
 }

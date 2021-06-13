@@ -59,7 +59,7 @@ namespace PBDE401___ShootingStars
 
             var pickResult = await FilePicker.PickAsync(new PickOptions
             {
-                FileTypes = FilePickerFileType.Pdf,
+                FileTypes = FilePickerFileType.Images,
                 PickerTitle = "Pick a document"
             });
 

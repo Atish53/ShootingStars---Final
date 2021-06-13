@@ -126,7 +126,8 @@ namespace PBDE401___ShootingStars
                 }
                 else if (id == Resource.Id.nav_feedback)
                 {
-
+                    Intent GetMap = new Intent(this, typeof(MapActivity));
+                    StartActivity(GetMap);
                 }
                 else if (id == Resource.Id.nav_additionalresources)
                 {

@@ -74,6 +74,7 @@
     <Compile Include="ManageQueriesActivity.cs" />
     <Compile Include="ManageQuizActivity.cs" />
     <Compile Include="ManageSubjectsActivity.cs" />
+    <Compile Include="MapActivity.cs" />
     <Compile Include="QueryActivity.cs" />
     <Compile Include="RegisterActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -213,6 +214,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_create_subject.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\GoogleMap_layout.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

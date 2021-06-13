@@ -16,11 +16,17 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView2" />
     <Button
-        android:text="Button"
+        android:text="Upload"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minWidth="25px"
         android:minHeight="25px"
         android:id="@+id/button_upload" />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/subject_dropdown" />
+    
+      
 
 </LinearLayout>

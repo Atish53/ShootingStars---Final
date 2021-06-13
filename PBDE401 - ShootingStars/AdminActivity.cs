@@ -48,6 +48,15 @@ namespace PBDE401___ShootingStars
                 StartActivity(manageQuiz);
             };
 
+            //Admin Subject
+            Button subjectQuiz = FindViewById<Button>(Resource.Id.manage_subject);
+
+            subjectQuiz.Click += (sender, e) =>
+            {
+                Intent manageSubject = new Intent(this, typeof(ManageSubjectsActivity));
+                StartActivity(manageSubject);
+            };
+
 
 
         }

@@ -37,6 +37,22 @@ namespace PBDE401___ShootingStars
             navigationView.SetNavigationItemSelectedListener(this);
         }
 
+        public override void OnActivityReenter(int resultCode, Intent data)
+        {
+            base.OnActivityReenter(resultCode, data);
+
+            var loginState = Preferences.Get("LoginState", "False");
+            var loginName = Preferences.Get("LoginName", "None");
+            var loginEmail = Preferences.Get("LoginEmail", "None");
+
+            TextView logged_Name = FindViewById<TextView>(Resource.Id.logged_name);
+            logged_Name.Text = loginName.ToString();
+
+            TextView logged_Email = FindViewById<TextView>(Resource.Id.logged_email);
+            logged_Email.Text = loginEmail.ToString();
+
+        }
+
         public override void OnBackPressed()
         {
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);

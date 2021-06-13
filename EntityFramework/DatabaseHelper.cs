@@ -35,7 +35,6 @@ namespace EntityFramework
             }
             return students;
         }
-
         //Read Queries
         public static List<Query> ReadQueries(string db_path, int id)
         {
@@ -45,6 +44,26 @@ namespace EntityFramework
                 queries = conn.Table<Query>().Where(s => s.StudentID == id).ToList();
             }
             return queries;
+        }
+        //Read Subjects
+        public static List<Subject> ReadSubjects(string db_path)
+        {
+            List<Subject> subjects = new List<Subject>();
+            using (var conn = new SQLite.SQLiteConnection(db_path))
+            {
+                subjects = conn.Table<Subject>().ToList();
+            }
+            return subjects;
+        }
+        //Read Materials
+        public static List<SubjectMaterial> ReadMaterials(string db_path)
+        {
+            List<SubjectMaterial> subjectmaterials = new List<SubjectMaterial>();
+            using (var conn = new SQLite.SQLiteConnection(db_path))
+            {
+                subjectmaterials = conn.Table<SubjectMaterial>().ToList();
+            }
+            return subjectmaterials;
         }
 
         public static Student ReadSingle(string db_path, string email)

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="Administrator Panel"
+        android:text="Create a subject"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,31 +13,32 @@
         android:minHeight="25px"
         android:id="@+id/textView1" />
     <TextView
-        android:text="Manage Database"
+        android:text="Subject Name"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView2" />
-    <Button
-        android:text="Manage Materials"
+    <EditText
+        android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/manage_materials" />
-    <Button
-        android:text="Manage Queries"
+        android:id="@+id/subject_text" />
+    <TextView
+        android:text="Subject Grade"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/manage_queries" />
-    <Button
-        android:text="Manage Quiz"
+        android:id="@+id/textView3" />
+    <EditText
+        android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/manage_quiz" />
+        android:id="@+id/subject_grade" />
     <Button
-        android:text="Manage Subject"
+        android:text="Create Subject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/manage_subject" />
-
+        android:id="@+id/make_subject" 
+         />
 
 </LinearLayout>

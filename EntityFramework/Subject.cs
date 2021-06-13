@@ -1,20 +1,23 @@
-﻿using System;
+﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace EntityFramework
 {
-    class Subject
+    public class Subject
     {
-        [Key]
+        [PrimaryKey, AutoIncrement]
         public int SubjectID { get; set; }
 
         public string SubjectName { get; set; }
 
-        public int SubjectGrade { get; set; }
-        
-        public virtual List<SubjectMaterial> Materials { get; set; }
+        public string SubjectGrade { get; set; }
+
+        [ForeignKey(typeof(SubjectMaterial))]
+        public int SubjectMaterialID{ get; set; }
 
 
 

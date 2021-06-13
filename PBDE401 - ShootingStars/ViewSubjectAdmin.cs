@@ -11,13 +11,14 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using EntityFramework;
+using Xamarin.Essentials;
 
 namespace PBDE401___ShootingStars
 {
-    [Activity(Label = "ViewMaterialsAdmin")]
-    public class ViewMaterialsAdmin : ListActivity
+    [Activity(Label = "ViewSubjectActivity")]
+    public class ViewSubjectAdmin : ListActivity
     {
-        List<SubjectMaterial> subjectMaterials;
+        List<Subject> subjects;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -27,10 +28,10 @@ namespace PBDE401___ShootingStars
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string db_path = Path.Combine(folderPath, db_name);
 
-            subjectMaterials = new List<SubjectMaterial>();
-            subjectMaterials = DatabaseHelper.ReadMaterials(db_path);
+            subjects = new List<Subject>();
+            subjects = DatabaseHelper.ReadSubjects(db_path);
 
-            var arrayAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, subjectMaterials);
+            var arrayAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, subjects);
             this.ListAdapter = arrayAdapter;
         }
     }

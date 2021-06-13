@@ -3,41 +3,37 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
     <TextView
-        android:text="Administrator Panel"
+        android:text="Manage Subjects"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minWidth="25px"
-        android:minHeight="25px"
         android:id="@+id/textView1" />
     <TextView
-        android:text="Manage Database"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Add Subjects"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView2" />
     <Button
-        android:text="Manage Materials"
+        android:text="Add Subjects"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/manage_materials" />
+        android:id="@+id/add_subjectslink" />
+    <TextView
+        android:text="View Current Subjects"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3" />
     <Button
-        android:text="Manage Queries"
+        android:text="View Subjects"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/manage_queries" />
-    <Button
-        android:text="Manage Quiz"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/manage_quiz" />
-    <Button
-        android:text="Manage Subject"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/manage_subject" />
+        android:id="@+id/view_subjectslink" />
 
 
 </LinearLayout>

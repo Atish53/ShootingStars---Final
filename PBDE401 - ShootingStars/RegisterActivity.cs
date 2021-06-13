@@ -122,6 +122,7 @@ namespace PBDE401___ShootingStars
                     Preferences.Set("LoginEmail", sEmail);
                     Preferences.Set("LoginPhone", sPhone);
                     Preferences.Set("LoginAddress", sAddress);
+                    Finish();
                 }                    
                 else
                 {

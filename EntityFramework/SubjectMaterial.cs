@@ -19,6 +19,7 @@ namespace EntityFramework
 
         public string itemName { get; set; }
 
+        //Actual Content
         public byte[] itemData { get; set; }
 
         public string mediaType { get; set; }

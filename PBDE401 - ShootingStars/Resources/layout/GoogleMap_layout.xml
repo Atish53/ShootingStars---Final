@@ -4,20 +4,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
-        android:src="@android:drawable/ic_menu_gallery"
+        android:src="@drawable/library"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/imageView1" />
+    <TextView
+        android:text="Below are locations to libraries:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:capitalize="none"
+        android:textStyle="bold"
+        android:textColor="#ff000000"/>
 
     <Button
-        android:text="Location 1"
+        android:text="Resevoir Hills Library"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnLoc1" />
     <Button
-        android:text="Location 2"
+        android:text="DURBAN NORTH MUNICIPAL LIBRARY"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnloc2" />
+    <Button
+        android:text="New West Library"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnloc3" />
+    <Button
+        android:text="Umdloti Library"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnloc4" />
+    <Button
+        android:text="Durban University of Technology Library"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnloc5" />
 
 </LinearLayout>

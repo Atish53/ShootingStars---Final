@@ -15,7 +15,7 @@ namespace PBDE401___ShootingStars
     [Activity(Label = "MapActivity")]
     public class MapActivity : Activity
     {
-        Button Button1, Button2;
+        Button Button1, Button2, Button3, Button4, Button5;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -27,9 +27,15 @@ namespace PBDE401___ShootingStars
 
             Button1 = FindViewById<Button>(Resource.Id.btnLoc1);
             Button2 = FindViewById<Button>(Resource.Id.btnloc2);
+            Button3 = FindViewById<Button>(Resource.Id.btnloc3);
+            Button4 = FindViewById<Button>(Resource.Id.btnloc4);
+            Button5 = FindViewById<Button>(Resource.Id.btnloc5);
 
             Button1.Click += Button1_Clicked;
             Button2.Click += Button2_Clicked;
+            Button3.Click += Button3_Clicked;
+            Button4.Click += Button4_Clicked;
+            Button5.Click += Button5_Clicked;
         }
 
         private async void Button1_Clicked(object sender, EventArgs e)
@@ -60,7 +66,49 @@ namespace PBDE401___ShootingStars
 
             }
         }
+        private async void Button3_Clicked(object sender, EventArgs e)
+        {
+            var location = new Location(-29.7802639, 30.9565085);
+            var options = new MapLaunchOptions { Name = "New West Library" };
 
+            try
+            {
+                await Map.OpenAsync(location, options);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private async void Button4_Clicked(object sender, EventArgs e)
+        {
+            var location = new Location(-29.669934, 31.115962);
+            var options = new MapLaunchOptions { Name = "Umdloti Library" };
+
+            try
+            {
+                await Map.OpenAsync(location, options);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        private async void Button5_Clicked(object sender, EventArgs e)
+        {
+            var location = new Location(-29.8535507, 31.0052107);
+            var options = new MapLaunchOptions { Name = "Durban University of Technology Library" };
+
+            try
+            {
+                await Map.OpenAsync(location, options);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
 
     }
 }

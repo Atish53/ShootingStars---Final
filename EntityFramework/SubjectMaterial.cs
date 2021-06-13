@@ -23,5 +23,10 @@ namespace EntityFramework
         public byte[] itemData { get; set; }
 
         public string mediaType { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format($"{itemName}" + "\n" + $"{SubjectMaterialID}");
+        }
     }
 }

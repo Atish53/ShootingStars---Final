@@ -23,7 +23,7 @@ namespace PBDE401___ShootingStars
             base.OnCreate(savedInstanceState);
 
             // Create your application here
-            string db_name = "students_db.sqlite";
+            string db_name = "material_db.sqlite";
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string db_path = Path.Combine(folderPath, db_name);
 

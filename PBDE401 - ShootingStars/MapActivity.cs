@@ -46,9 +46,19 @@ namespace PBDE401___ShootingStars
 
             }
         }
-        private void Button2_Clicked(object sender, EventArgs e)
+        private async void Button2_Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var location = new Location(-29.785736, 31.03898);
+            var options = new MapLaunchOptions { Name = "DURBAN NORTH MUNICIPAL LIBRARY" };
+
+            try
+            {
+                await Map.OpenAsync(location, options);
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
 

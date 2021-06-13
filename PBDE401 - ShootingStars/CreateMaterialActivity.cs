@@ -31,11 +31,6 @@ namespace PBDE401___ShootingStars
             //Add Materials Button
             Button uploadMaterials = FindViewById<Button>(Resource.Id.button_upload);
 
-            
-            string db_name = "student_db.sqlite";
-            string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            string db_path = Path.Combine(folderPath, db_name);
-
             /*Spinner = (Spinner)FindViewById(Resource.Id.subject_dropdown);
             //Using DataBaseHelper to get a list of subjects via a method called GetStudents()
             Subjects = DatabaseHelper.ReadSubjects(db_path);
@@ -51,7 +46,7 @@ namespace PBDE401___ShootingStars
 
         private async void UploadMaterials_Click(object sender, EventArgs e)
         {
-            string db_name = "student_db.sqlite";
+            string db_name = "material_db.sqlite";
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string db_path = Path.Combine(folderPath, db_name);
 
@@ -59,7 +54,7 @@ namespace PBDE401___ShootingStars
 
             var pickResult = await FilePicker.PickAsync(new PickOptions
             {
-                FileTypes = FilePickerFileType.Images,
+                FileTypes = FilePickerFileType.Pdf,
                 PickerTitle = "Pick a document"
             });
 

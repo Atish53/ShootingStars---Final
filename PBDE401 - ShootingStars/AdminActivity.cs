@@ -44,7 +44,7 @@ namespace PBDE401___ShootingStars
 
             adminQuiz.Click += (sender, e) =>
             {
-                Intent manageQuiz = new Intent(this, typeof(ManageQuizActivity));
+                Intent manageQuiz = new Intent(this, typeof(CreateQuizActivity));
                 StartActivity(manageQuiz);
             };
 
@@ -57,6 +57,15 @@ namespace PBDE401___ShootingStars
                 StartActivity(manageSubject);
             };
 
+
+            //Admin QuizContent
+            Button quizContent = FindViewById<Button>(Resource.Id.manage_subject);
+
+            subjectQuiz.Click += (sender, e) =>
+            {
+                Intent manageSubject = new Intent(this, typeof(ManageSubjectsActivity));
+                StartActivity(manageSubject);
+            };
 
 
         }

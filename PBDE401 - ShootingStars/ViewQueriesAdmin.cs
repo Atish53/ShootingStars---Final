@@ -32,7 +32,7 @@ namespace PBDE401___ShootingStars
             queries = new List<Query>();
             queries = DatabaseHelper.ReadQueriesAdmin(db_path);
 
-            customList = FindViewById<ListView>(Resource.Id.list);
+            customList = FindViewById<ListView>(Resource.Id.list_qadmin);
             customList.Adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, queries);
 
             customList.ItemClick += CustomList_ItemClick;

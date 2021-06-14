@@ -21,7 +21,6 @@ namespace PBDE401___ShootingStars
     {
         Button createButton;
         EditText createQuizText, createQuizSubjectID;
-        int StudentID;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -29,10 +28,10 @@ namespace PBDE401___ShootingStars
 
             // Create your application here
 
-            createButton = FindViewById<Button>(Resource.Id.make_query);
+            createButton = FindViewById<Button>(Resource.Id.make_quiz);
             createButton.Click += createQuiz_Click;
 
-            createQuizSubjectID = FindViewById<EditText>(Resource.Id.quiz_subject);
+            createQuizSubjectID = FindViewById<EditText>(Resource.Id.quiz_subject); //Textbox for subject
             createQuizText = FindViewById<EditText>(Resource.Id.quiz_name);
         }
 

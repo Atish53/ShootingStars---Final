@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -31,7 +32,7 @@
         android:minHeight="25px"
         android:id="@+id/textView3" />
     <TextView
-        android:text="Please enter the number according to your subject: 1 - English, 2 - Maths, 3 - History, 4 - Biology"
+        android:text="Please enter the subject name"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,6 +50,61 @@
         android:layout_height="wrap_content"
         android:id="@+id/make_quiz" 
          />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:id="@+id/question1"
+        android:text="Question 1" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:id="@+id/question2" 
+        android:text="Question 2"/>
+     <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:id="@+id/question3" 
+        android:text="Question 3"/>
+     <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:id="@+id/question4" 
+        android:text="Question 4"/>
+     <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:id="@+id/question5"
+        android:text="Question 5"/>
+     <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:id="@+id/answer1" />
+     <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:id="@+id/answer2" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:id="@+id/answer3" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:id="@+id/answer4" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:id="@+id/answer5" />
 
 </LinearLayout>
 

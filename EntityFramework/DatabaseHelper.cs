@@ -89,6 +89,17 @@ namespace EntityFramework
             return student;
         }
 
+        //Find a subject using subject name
+        public static Subject ReadQuiz(string db_path, string name)
+        {
+            Subject subject  = new Subject();
+            using (var conn = new SQLite.SQLiteConnection(db_path))
+            {
+                subject = conn.Find<Subject>(s => s.SubjectName == name);
+            }
+            return subject;
+        }
+
         //Read a single Material
         public static SubjectMaterial ReadSingleMaterials(string db_path, string id)
         {

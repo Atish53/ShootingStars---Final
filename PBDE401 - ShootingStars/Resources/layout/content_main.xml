@@ -12,8 +12,8 @@
 
     <ImageView
         android:src="@drawable/WallBG"
-        android:layout_width="433.5dp"
-        android:layout_height="740.0dp"
+        android:layout_width="470.3dp"
+        android:layout_height="814.0dp"
         android:id="@+id/imageView1"
         android:layout_marginTop="0.0dp"
         android:layout_marginBottom="22.6dp" />
@@ -21,24 +21,24 @@
     <TextView
         android:text="Welcome to Shooting Stars"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="487.6dp"
+        android:layout_width="386.3dp"
         android:layout_height="71.3dp"
         android:id="@+id/textView1"
         android:textColor="#e54704ba"
-        android:textSize="82px"
-        android:layout_marginLeft="18.9dp"
+        android:textSize="113px"
+        android:layout_marginLeft="16.0dp"
         android:layout_marginTop="7.3dp"
         android:layout_marginBottom="0.0dp"
         android:textStyle="italic|bold" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="399.6dp"
-        android:layout_height="284.4dp"
+        android:layout_width="441.7dp"
+        android:layout_height="310.0dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:src="@drawable/educationtree"
         android:layout_marginBottom="0.0dp"
-        android:layout_marginTop="10.1dp"
+        android:layout_marginTop="11.5dp"
         android:layout_marginLeft="0.0dp" />
 
     <TextView
@@ -48,20 +48,20 @@
         android:layout_height="148.4dp"
         android:id="@+id/textView2"
         android:textColor="#e5ffd000"
-        android:textSize="82px"
-        android:layout_marginLeft="18.9dp"
-        android:layout_marginTop="272.1dp"
+        android:textSize="103px"
+        android:layout_marginLeft="16.0dp"
+        android:layout_marginTop="297.5dp"
         android:layout_marginBottom="5.8dp"
         android:textStyle="italic|bold" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="440.7dp"
-        android:layout_height="315.6dp"
+        android:layout_width="505.1dp"
+        android:layout_height="343.7dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:src="@drawable/onlinegrad"
         android:layout_marginBottom="0.0dp"
-        android:layout_marginTop="423.3dp"
+        android:layout_marginTop="453.6dp"
         android:layout_marginLeft="0.0dp" />
 
 </RelativeLayout>

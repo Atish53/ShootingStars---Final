@@ -14,7 +14,7 @@ namespace PBDE401___ShootingStars
     [Activity(Label = "SubjectsActivity")]
     public class SubjectsActivity : Activity
     {
-        ImageButton English, History, Maths, Biology;
+        ImageButton English, History;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -26,8 +26,8 @@ namespace PBDE401___ShootingStars
 
             English = FindViewById<ImageButton>(Resource.Id.btnenglish);
             History = FindViewById<ImageButton>(Resource.Id.btnhistory);
-            Maths = FindViewById<ImageButton>(Resource.Id.btnmaths);
-            Biology = FindViewById<ImageButton>(Resource.Id.btnbiology);
+            //Maths = FindViewById<ImageButton>(Resource.Id.btnmaths);
+            //Biology = FindViewById<ImageButton>(Resource.Id.btnbiology);
 
             English.Click += English_Click;
             History.Click += History_Click;
@@ -37,12 +37,14 @@ namespace PBDE401___ShootingStars
 
         private void History_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Intent intent = new Intent(this, typeof(HistoryActivity));
+            StartActivity(intent);
         }
 
         private void English_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Intent intent = new Intent(this, typeof(EnglishActivity));
+            StartActivity(intent);
         }
 
     }

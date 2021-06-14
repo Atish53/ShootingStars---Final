@@ -23,7 +23,7 @@ namespace EntityFramework
 
         public override string ToString()
         {
-            return string.Format($"{Message}" + "\n" + $"{Response}" + "\n" + $"{Status}" + "\n" + $"{QueryID}");
+            return string.Format("Query Message:"+ " " + $"{Message}" + "\n" + "Response: " + $"{Response}" + "\n" + "Status: " + $"{Status}" + "\n" + "Query ID: " + $"{QueryID}");
         }
     }
 }

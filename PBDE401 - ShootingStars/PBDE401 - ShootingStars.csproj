@@ -67,7 +67,9 @@
     <Compile Include="CreateMaterialActivity.cs" />
     <Compile Include="CreateQueryActivity.cs" />
     <Compile Include="CreateSubjectActivity.cs" />
+    <Compile Include="EnglishActivity.cs" />
     <Compile Include="GetStudentsActivity.cs" />
+    <Compile Include="HistoryActivity.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="ManageMaterialsActivity.cs" />
@@ -275,6 +277,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\cutbackground.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\English_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\History_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

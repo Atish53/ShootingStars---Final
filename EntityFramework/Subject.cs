@@ -19,7 +19,10 @@ namespace EntityFramework
         [ForeignKey(typeof(SubjectMaterial))]
         public int SubjectMaterialID{ get; set; }
 
-
+        public override string ToString()
+        {
+            return string.Format("Subject ID:"+ " " + $"{SubjectID}" + "\n" + "Subject Grade:"+ " " +$"{SubjectName}" + "\n" + "Subject Grade:"+ " " + $"{SubjectGrade}");
+        }
 
     }
 }

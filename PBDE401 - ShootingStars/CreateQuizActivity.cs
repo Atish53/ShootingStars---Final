@@ -45,8 +45,8 @@ namespace PBDE401___ShootingStars
             Quiz quiz = new Quiz();
             
 
-            Query newQuiz = new Query() { StudentID = StudentID, Message = createQuizText.Text };
-            if (DatabaseHelper.Insert(ref newQuiz, db_path)) //Pushes and checks if query data has been stored successfully.
+            Quiz newQuiz = new Quiz() { QuizName = createQuizText.Text, SubjectID = int.Parse(createQuizSubjectID.Text)};
+            if (DatabaseHelper.Insert(ref newQuiz, db_path)) //Pushes and checks if quiz data has been stored successfully.
             {
                 View view = (View)sender;
                 Snackbar.Make(view, "Your quiz has been  successfully created.", Snackbar.LengthLong)

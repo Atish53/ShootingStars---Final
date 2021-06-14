@@ -14,8 +14,7 @@ namespace EntityFramework
 
         public string QuizName { get; set; }
 
+        [ForeignKey(typeof(Subject))]
         public int SubjectID { get; set; }
-
-        public int Answer { get; set; }
     }
 }

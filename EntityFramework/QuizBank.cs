@@ -12,6 +12,7 @@ namespace EntityFramework
         [PrimaryKey, AutoIncrement]
         public int QuestionID { get; set; }
 
+        [ForeignKey(typeof(Quiz))]
         public int QuizID { get; set; }
 
         public string Question { get; set; }

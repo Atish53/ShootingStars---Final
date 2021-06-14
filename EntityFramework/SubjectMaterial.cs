@@ -26,7 +26,7 @@ namespace EntityFramework
 
         public override string ToString()
         {
-            return string.Format($"{itemName}" + "\n" + $"{SubjectMaterialID}");
+            return string.Format("Name: " + $"{itemName}" + "\n" + "Id: " + $"{SubjectMaterialID}");
         }
     }
 }

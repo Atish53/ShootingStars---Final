@@ -52,16 +52,27 @@
          />
     <EditText
         android:inputType="textMultiLine"
+        android:hint="Question 1"
         android:layout_width="match_parent"
         android:layout_height="26.5dp"
-        android:id="@+id/question1"
-        android:text="Question 1" />
+        android:id="@+id/question1" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:id="@+id/answer1" />
     <EditText
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="26.5dp"
         android:id="@+id/question2" 
         android:text="Question 2"/>
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:id="@+id/answer2" />
+
      <EditText
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
@@ -72,34 +83,25 @@
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="26.5dp"
+        android:id="@+id/answer3" />
+
+     <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
         android:id="@+id/question4" 
         android:text="Question 4"/>
      <EditText
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="26.5dp"
+        android:id="@+id/answer4" />
+     <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
         android:id="@+id/question5"
         android:text="Question 5"/>
-     <EditText
-        android:inputType="textMultiLine"
-        android:layout_width="match_parent"
-        android:layout_height="26.5dp"
-        android:id="@+id/answer1" />
-     <EditText
-        android:inputType="textMultiLine"
-        android:layout_width="match_parent"
-        android:layout_height="26.5dp"
-        android:id="@+id/answer2" />
-    <EditText
-        android:inputType="textMultiLine"
-        android:layout_width="match_parent"
-        android:layout_height="26.5dp"
-        android:id="@+id/answer3" />
-    <EditText
-        android:inputType="textMultiLine"
-        android:layout_width="match_parent"
-        android:layout_height="26.5dp"
-        android:id="@+id/answer4" />
     <EditText
         android:inputType="textMultiLine"
         android:layout_width="match_parent"

@@ -20,19 +20,31 @@ namespace PBDE401___ShootingStars
     public class CreateQuizActivity : Activity
     {
         Button createButton;
-        EditText createQuizText, createQuizSubjectID;
+        EditText createQuizText, createQuizSubjectID, Q1, A1, Q2, A2, Q3, A3, Q4, A4, Q5, A5;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_create_quiz); //activity create query layout
 
             // Create your application here
-
-            createButton = FindViewById<Button>(Resource.Id.make_quiz);
-            createButton.Click += createQuiz_Click;
-
             createQuizSubjectID = FindViewById<EditText>(Resource.Id.quiz_subject); //Textbox for subject
             createQuizText = FindViewById<EditText>(Resource.Id.quiz_name);
+            Q1 = FindViewById<EditText>(Resource.Id.question1);
+            A1 = FindViewById<EditText>(Resource.Id.answer1);
+            Q2 = FindViewById<EditText>(Resource.Id.question2);
+            A2 = FindViewById<EditText>(Resource.Id.answer2);
+            Q3 = FindViewById<EditText>(Resource.Id.question3);
+            A3 = FindViewById<EditText>(Resource.Id.answer3);
+            Q4 = FindViewById<EditText>(Resource.Id.question4);
+            A4 = FindViewById<EditText>(Resource.Id.answer4);
+            Q5 = FindViewById<EditText>(Resource.Id.question5);
+            A5 = FindViewById<EditText>(Resource.Id.answer5);
+
+            createButton = FindViewById<Button>(Resource.Id.make_quiz);
+
+            createButton.Click += createQuiz_Click;
+
+    
         }
 
         private void createQuiz_Click(object sender, EventArgs e)

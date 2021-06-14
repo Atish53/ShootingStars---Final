@@ -116,8 +116,8 @@ namespace PBDE401___ShootingStars
                 }
                 else if (id == Resource.Id.nav_subjects)
                 {
-                    Intent StudentIntent = new Intent(this, typeof(StudentActivity));
-                    StartActivity(StudentIntent);
+                    Intent GetSubject = new Intent(this, typeof(SubjectsActivity));
+                    StartActivity(GetSubject);
                 }
                 else if (id == Resource.Id.nav_planner)
                 {
@@ -152,8 +152,8 @@ namespace PBDE401___ShootingStars
                 }
                 else if (id == Resource.Id.nav_subjects)
                 {
-                    Intent StudentIntent = new Intent(this, typeof(StudentActivity));
-                    StartActivity(StudentIntent);
+                    Intent GetSUbject = new Intent(this, typeof(SubjectsActivity));
+                    StartActivity(GetSUbject);
                 }
                 else if (id == Resource.Id.nav_planner)
                 {

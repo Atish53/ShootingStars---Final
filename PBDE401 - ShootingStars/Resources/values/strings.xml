@@ -3,4 +3,9 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
+  <string name="Subject">Subject</string>
+  <string name="English">English</string>
+  <string name="Maths">Maths</string>
+  <string name="Biology">Biology</string>
+  <string name="History">History</string>
 </resources>

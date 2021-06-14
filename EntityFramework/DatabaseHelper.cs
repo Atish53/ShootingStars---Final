@@ -45,6 +45,18 @@ namespace EntityFramework
             }
             return queries;
         }
+
+        //Read Queries Admin
+        public static List<Query> ReadQueriesAdmin(string db_path)
+        {
+            List<Query> queries = new List<Query>();
+            using (var conn = new SQLite.SQLiteConnection(db_path))
+            {
+                queries = conn.Table<Query>().ToList();
+            }
+            return queries;
+        }
+
         //Read Subjects
         public static List<Subject> ReadSubjects(string db_path)
         {

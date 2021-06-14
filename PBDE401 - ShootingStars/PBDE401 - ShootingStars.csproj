@@ -86,6 +86,7 @@
     <Compile Include="StudentActivity.cs" />
     <Compile Include="SubjectsActivity.cs" />
     <Compile Include="ViewMaterialsAdmin.cs" />
+    <Compile Include="ViewQueriesAdmin.cs" />
     <Compile Include="ViewSubjectAdmin.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -292,6 +293,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_create_quiz.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_query_admin.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

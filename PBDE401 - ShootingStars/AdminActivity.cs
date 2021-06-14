@@ -35,7 +35,7 @@ namespace PBDE401___ShootingStars
 
             adminQueries.Click += (sender, e) =>
             {
-                Intent manageQueries = new Intent(this, typeof(ManageQueriesActivity));
+                Intent manageQueries = new Intent(this, typeof(ViewQueriesAdmin));
                 StartActivity(manageQueries);
             };
 

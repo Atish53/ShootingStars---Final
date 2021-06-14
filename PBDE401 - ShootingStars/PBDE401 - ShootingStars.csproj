@@ -66,6 +66,7 @@
     <Compile Include="AdminActivity.cs" />
     <Compile Include="CreateMaterialActivity.cs" />
     <Compile Include="CreateQueryActivity.cs" />
+    <Compile Include="CreateQuizActivity.cs" />
     <Compile Include="CreateSubjectActivity.cs" />
     <Compile Include="EnglishActivity.cs" />
     <Compile Include="GetStudentsActivity.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="MapActivity.cs" />
     <Compile Include="QueryActivity.cs" />
     <Compile Include="RegisterActivity.cs" />
+    <Compile Include="Resources\CreateQuizActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentActivity.cs" />
@@ -285,6 +287,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\History_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_create_quiz.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

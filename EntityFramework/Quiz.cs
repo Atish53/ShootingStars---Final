@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using SQLite;
+using SQLiteNetExtensions.Attributes;
 
 namespace EntityFramework
 {
-    class Quiz
+    public class Quiz
     {
-        [Key]
+        [PrimaryKey, AutoIncrement]
         public int QuizID { get; set; }
 
         public string QuizName { get; set; }

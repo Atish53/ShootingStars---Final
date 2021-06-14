@@ -66,6 +66,7 @@ namespace EntityFramework
             return subjectmaterials;
         }
 
+        //Read a single student
         public static Student ReadSingle(string db_path, string email)
         {
             Student student = new Student();
@@ -74,6 +75,18 @@ namespace EntityFramework
                 student = conn.Find<Student>(s => s.StudentEmail == email);
             }
             return student;
+        }
+
+        //Read a single Material
+        public static SubjectMaterial ReadSingleMaterials(string db_path, string id)
+        {
+            int ids = int.Parse(id);
+            SubjectMaterial subjectMaterial = new SubjectMaterial();
+            using (var conn = new SQLite.SQLiteConnection(db_path))
+            {
+                subjectMaterial = conn.Find<SubjectMaterial>(i => i.SubjectMaterialID == ids);
+            }
+            return subjectMaterial;
         }
 
 

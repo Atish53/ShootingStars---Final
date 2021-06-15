@@ -106,9 +106,7 @@ namespace PBDE401___ShootingStars
                 mail.Subject = "Your report for quiz attempt #" + quizAttempt.QuizAttemptID;
                 mail.Body = "Dear " + loginEmail + ", find your progress in the attached PDF document.";
                 mail.To.Add(emailTo);
-
                 mail.Attachments.Add(invoicePdf);
-
                 mail.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();
                 smtp.Host = "smtp-mail.outlook.com";

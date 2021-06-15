@@ -35,69 +35,86 @@
         android:layout_width="match_parent"
         android:layout_height="46.0dp"
         android:id="@+id/spinner_quizsub"
-        android:tooltipText="Select a subject to add the quiz to: " />        
+        android:tooltipText="Select a subject to add the quiz to: " />
     <Button
         android:text="Create Quiz"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content"        
         android:id="@+id/make_quiz" 
+        android:padding="5dp"
          />
     <EditText
         android:inputType="textMultiLine"
         android:hint="Question 1"
         android:layout_width="match_parent"
         android:layout_height="26.5dp"
+        android:padding="5dp"
         android:id="@+id/question1" />
     <EditText
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="26.5dp"
+        android:padding="5dp"
+        android:hint="Answer 1"
         android:id="@+id/answer1" />
     <EditText
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="26.5dp"
-        android:id="@+id/question2" 
-        android:text="Question 2"/>
+        android:padding="5dp"
+        android:id="@+id/question2"
+        android:hint="Question 2"/>
     <EditText
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="26.5dp"
+        android:padding="5dp"
+        android:hint="Answer 2"
         android:id="@+id/answer2" />
 
-     <EditText
-        android:inputType="textMultiLine"
-        android:layout_width="match_parent"
-        android:layout_height="26.5dp"
-        android:id="@+id/question3" 
-        android:text="Question 3"/>
-     <EditText
-        android:inputType="textMultiLine"
-        android:layout_width="match_parent"
-        android:layout_height="26.5dp"
-        android:id="@+id/answer3" />
-
-     <EditText
-        android:inputType="textMultiLine"
-        android:layout_width="match_parent"
-        android:layout_height="26.5dp"
-        android:id="@+id/question4" 
-        android:text="Question 4"/>
-     <EditText
-        android:inputType="textMultiLine"
-        android:layout_width="match_parent"
-        android:layout_height="26.5dp"
-        android:id="@+id/answer4" />
-     <EditText
-        android:inputType="textMultiLine"
-        android:layout_width="match_parent"
-        android:layout_height="26.5dp"
-        android:id="@+id/question5"
-        android:text="Question 5"/>
     <EditText
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="26.5dp"
+        android:id="@+id/question3"
+        android:hint="Question 3"
+        android:padding="5dp"
+        />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:padding="5dp"
+        android:hint="Answer 3"
+        android:id="@+id/answer3" />
+
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:id="@+id/question4"
+        android:padding="5dp"
+       android:hint="Question 4"/>
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:padding="5dp"
+        android:hint="Android 4"
+        android:id="@+id/answer4" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:padding="5dp"
+        android:id="@+id/question5"
+        android:hint="Question 5"/>
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="26.5dp"
+        android:padding="5dp"
+        android:hint="Answer 5"
         android:id="@+id/answer5" />
 
 </LinearLayout>

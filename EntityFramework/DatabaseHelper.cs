@@ -32,7 +32,7 @@ namespace EntityFramework
             List<Student> students = new List<Student>();
             if (students.Count == 0)
             {
-                Student student = new Student() { StudentEmail = "atishhariparsad@gmail.com", StudentName = "Atish Hariparsad", StudentPassword = "Atish123", StudentAddress = "123 Random Road", StudentPhone = "0623485641" };
+                Student student = new Student() { StudentEmail = "atishhariparsad2@gmail.com", StudentName = "Atish Hariparsad", StudentPassword = "Atish123", StudentAddress = "123 Random Road", StudentPhone = "0623485641" };
                 Insert(ref student, db_path);
                 using (var conn = new SQLite.SQLiteConnection(db_path))
                 {

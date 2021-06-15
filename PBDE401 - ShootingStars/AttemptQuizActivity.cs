@@ -46,6 +46,12 @@ namespace PBDE401___ShootingStars
 
             Quiz quiz = DatabaseHelper.ReadSingleQuiz(db_path, 1);
 
+            TextView date = FindViewById<TextView>(Resource.Id.quiz_attemptdate);
+            date.Text = Convert.ToString(DateTime.Now);
+
+            TextView name = FindViewById<TextView>(Resource.Id.quiz_attemptsubject);
+            name.Text = "English Quiz - Nouns";
+
             q1.Text = quiz.Question1;
             q2.Text = quiz.Question2;
             q3.Text = quiz.Question3;
@@ -77,6 +83,8 @@ namespace PBDE401___ShootingStars
                 TextView q3 = FindViewById<TextView>(Resource.Id.quiz_q3);
                 TextView q4 = FindViewById<TextView>(Resource.Id.quiz_q4);
                 TextView q5 = FindViewById<TextView>(Resource.Id.quiz_q5);
+
+                
 
                 EditText a1 = FindViewById<EditText>(Resource.Id.quiz_a1);
                 EditText a2 = FindViewById<EditText>(Resource.Id.quiz_a2);

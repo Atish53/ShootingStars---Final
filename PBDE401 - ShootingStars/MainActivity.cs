@@ -90,7 +90,7 @@ namespace PBDE401___ShootingStars
             if (id == Resource.Id.nav_grades)
             {
                 // Handle the grades action
-                Intent queryIntent = new Intent(this, typeof(StudentQuizReviewActivity));
+                Intent queryIntent = new Intent(this, typeof(ViewAttemptActivity));
                 StartActivity(queryIntent);
             }
             else if (id == Resource.Id.nav_subjects)

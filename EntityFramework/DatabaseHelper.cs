@@ -30,6 +30,15 @@ namespace EntityFramework
         public static List<Student> Read(string db_path)
         {
             List<Student> students = new List<Student>();
+            if (students.Count == 0)
+            {
+                Student student = new Student() { StudentEmail = "atishhariparsad@gmail.com", StudentName = "Atish Hariparsad", StudentPassword = "Atish123", StudentAddress = "123 Random Road", StudentPhone = "0623485641" };
+                Insert(ref student, db_path);
+                using (var conn = new SQLite.SQLiteConnection(db_path))
+                {
+                    students = conn.Table<Student>().ToList();
+                }
+            }
             using (var conn = new SQLite.SQLiteConnection(db_path))
             {
                 students = conn.Table<Student>().ToList();
@@ -45,7 +54,7 @@ namespace EntityFramework
                 queries = conn.Table<Query>().Where(s => s.StudentID == id).ToList();
             }
             return queries;
-        }
+        }       
 
         //Read Queries Admin
         public static List<Query> ReadQueriesAdmin(string db_path)
@@ -61,7 +70,17 @@ namespace EntityFramework
         //Read Subjects
         public static List<Subject> ReadSubjects(string db_path)
         {
+            
             List<Subject> subjects = new List<Subject>();
+            if (subjects.Count == 0)
+            {
+                Subject subject = new Subject() { SubjectName = "English", SubjectGrade = "4" };
+                Insert(ref subject , db_path);
+                using (var conn = new SQLite.SQLiteConnection(db_path))
+                {
+                    subjects = conn.Table<Subject>().ToList();
+                }
+            }
             using (var conn = new SQLite.SQLiteConnection(db_path))
             {
                 subjects = conn.Table<Subject>().ToList();
@@ -79,6 +98,17 @@ namespace EntityFramework
                 subjectmaterials = conn.Table<SubjectMaterial>().ToList();
             }
             return subjectmaterials;
+        }
+
+        //Read Quiz Attempts
+        public static List<QuizAttempt> ReadQuizAttempts(string db_path)
+        {
+            List<QuizAttempt> quizAttempts = new List<QuizAttempt>();
+            using (var conn = new SQLite.SQLiteConnection(db_path))
+            {
+                quizAttempts = conn.Table<QuizAttempt>().ToList();
+            }
+            return quizAttempts;
         }
 
         //Read a single student

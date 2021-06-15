@@ -3733,148 +3733,148 @@ namespace PBDE401___ShootingStars
 			public const int listMode = 2131230864;
 			
 			// aapt resource value: 0x7F080091
-			public const int list_item = 2131230865;
+			public const int list_attempts = 2131230865;
 			
 			// aapt resource value: 0x7F080092
-			public const int list_qadmin = 2131230866;
+			public const int list_item = 2131230866;
 			
 			// aapt resource value: 0x7F080093
-			public const int logged_email = 2131230867;
+			public const int list_qadmin = 2131230867;
 			
 			// aapt resource value: 0x7F080094
-			public const int logged_name = 2131230868;
+			public const int logged_email = 2131230868;
 			
 			// aapt resource value: 0x7F080095
-			public const int loginEmailLabel = 2131230869;
+			public const int logged_name = 2131230869;
 			
 			// aapt resource value: 0x7F080096
-			public const int loginPasswordLabel = 2131230870;
+			public const int loginEmailLabel = 2131230870;
 			
 			// aapt resource value: 0x7F080097
-			public const int login_button = 2131230871;
+			public const int loginPasswordLabel = 2131230871;
 			
 			// aapt resource value: 0x7F080098
-			public const int login_studentEmail = 2131230872;
+			public const int login_button = 2131230872;
 			
 			// aapt resource value: 0x7F080099
-			public const int login_studentPassword = 2131230873;
+			public const int login_studentEmail = 2131230873;
 			
 			// aapt resource value: 0x7F08009A
-			public const int make_query = 2131230874;
+			public const int login_studentPassword = 2131230874;
 			
 			// aapt resource value: 0x7F08009B
-			public const int make_quiz = 2131230875;
+			public const int make_query = 2131230875;
 			
 			// aapt resource value: 0x7F08009C
-			public const int make_subject = 2131230876;
+			public const int make_quiz = 2131230876;
 			
 			// aapt resource value: 0x7F08009D
-			public const int manage_materials = 2131230877;
+			public const int make_subject = 2131230877;
 			
 			// aapt resource value: 0x7F08009E
-			public const int manage_queries = 2131230878;
+			public const int manage_materials = 2131230878;
 			
 			// aapt resource value: 0x7F08009F
-			public const int manage_quiz = 2131230879;
+			public const int manage_queries = 2131230879;
 			
 			// aapt resource value: 0x7F0800A0
-			public const int manage_subject = 2131230880;
+			public const int manage_quiz = 2131230880;
 			
 			// aapt resource value: 0x7F0800A1
-			public const int masked = 2131230881;
+			public const int manage_subject = 2131230881;
 			
 			// aapt resource value: 0x7F0800A2
-			public const int message = 2131230882;
+			public const int masked = 2131230882;
+			
+			// aapt resource value: 0x7F0800A3
+			public const int message = 2131230883;
 			
 			// aapt resource value: 0x7F080003
 			public const int META = 2131230723;
 			
-			// aapt resource value: 0x7F0800A3
-			public const int middle = 2131230883;
-			
 			// aapt resource value: 0x7F0800A4
-			public const int mini = 2131230884;
+			public const int middle = 2131230884;
 			
 			// aapt resource value: 0x7F0800A5
-			public const int mtrl_child_content_container = 2131230885;
+			public const int mini = 2131230885;
 			
 			// aapt resource value: 0x7F0800A6
-			public const int mtrl_internal_children_alpha_tag = 2131230886;
+			public const int mtrl_child_content_container = 2131230886;
 			
 			// aapt resource value: 0x7F0800A7
-			public const int multiply = 2131230887;
+			public const int mtrl_internal_children_alpha_tag = 2131230887;
 			
 			// aapt resource value: 0x7F0800A8
-			public const int nameEditText = 2131230888;
-			
-			// aapt resource value: 0x7F0800B1
-			public const int navigation_header_container = 2131230897;
+			public const int multiply = 2131230888;
 			
 			// aapt resource value: 0x7F0800A9
-			public const int nav_about = 2131230889;
-			
-			// aapt resource value: 0x7F0800AA
-			public const int nav_additionalresources = 2131230890;
-			
-			// aapt resource value: 0x7F0800AB
-			public const int nav_grades = 2131230891;
-			
-			// aapt resource value: 0x7F0800AC
-			public const int nav_login = 2131230892;
-			
-			// aapt resource value: 0x7F0800AD
-			public const int nav_planner = 2131230893;
-			
-			// aapt resource value: 0x7F0800AE
-			public const int nav_question = 2131230894;
-			
-			// aapt resource value: 0x7F0800AF
-			public const int nav_subjects = 2131230895;
-			
-			// aapt resource value: 0x7F0800B0
-			public const int nav_view = 2131230896;
+			public const int nameEditText = 2131230889;
 			
 			// aapt resource value: 0x7F0800B2
-			public const int never = 2131230898;
+			public const int navigation_header_container = 2131230898;
+			
+			// aapt resource value: 0x7F0800AA
+			public const int nav_about = 2131230890;
+			
+			// aapt resource value: 0x7F0800AB
+			public const int nav_additionalresources = 2131230891;
+			
+			// aapt resource value: 0x7F0800AC
+			public const int nav_grades = 2131230892;
+			
+			// aapt resource value: 0x7F0800AD
+			public const int nav_login = 2131230893;
+			
+			// aapt resource value: 0x7F0800AE
+			public const int nav_planner = 2131230894;
+			
+			// aapt resource value: 0x7F0800AF
+			public const int nav_question = 2131230895;
+			
+			// aapt resource value: 0x7F0800B0
+			public const int nav_subjects = 2131230896;
+			
+			// aapt resource value: 0x7F0800B1
+			public const int nav_view = 2131230897;
 			
 			// aapt resource value: 0x7F0800B3
-			public const int none = 2131230899;
+			public const int never = 2131230899;
 			
 			// aapt resource value: 0x7F0800B4
-			public const int normal = 2131230900;
+			public const int none = 2131230900;
 			
 			// aapt resource value: 0x7F0800B5
-			public const int notification_background = 2131230901;
+			public const int normal = 2131230901;
 			
 			// aapt resource value: 0x7F0800B6
-			public const int notification_main_column = 2131230902;
+			public const int notification_background = 2131230902;
 			
 			// aapt resource value: 0x7F0800B7
-			public const int notification_main_column_container = 2131230903;
+			public const int notification_main_column = 2131230903;
 			
 			// aapt resource value: 0x7F0800B8
-			public const int outline = 2131230904;
+			public const int notification_main_column_container = 2131230904;
 			
 			// aapt resource value: 0x7F0800B9
-			public const int parallax = 2131230905;
+			public const int outline = 2131230905;
 			
 			// aapt resource value: 0x7F0800BA
-			public const int parentPanel = 2131230906;
+			public const int parallax = 2131230906;
 			
 			// aapt resource value: 0x7F0800BB
-			public const int parent_matrix = 2131230907;
+			public const int parentPanel = 2131230907;
 			
 			// aapt resource value: 0x7F0800BC
-			public const int passwordEditText = 2131230908;
+			public const int parent_matrix = 2131230908;
 			
 			// aapt resource value: 0x7F0800BD
-			public const int phoneEditText = 2131230909;
+			public const int passwordEditText = 2131230909;
 			
 			// aapt resource value: 0x7F0800BE
-			public const int pin = 2131230910;
+			public const int phoneEditText = 2131230910;
 			
 			// aapt resource value: 0x7F0800BF
-			public const int planner_list = 2131230911;
+			public const int pin = 2131230911;
 			
 			// aapt resource value: 0x7F0800C0
 			public const int progress_circular = 2131230912;
@@ -4486,25 +4486,25 @@ namespace PBDE401___ShootingStars
 			public const int activity_manage_subjects = 2131427366;
 			
 			// aapt resource value: 0x7F0B0027
-			public const int activity_planner = 2131427367;
+			public const int activity_query = 2131427367;
 			
 			// aapt resource value: 0x7F0B0028
-			public const int activity_query = 2131427368;
+			public const int activity_query_admin = 2131427368;
 			
 			// aapt resource value: 0x7F0B0029
-			public const int activity_query_admin = 2131427369;
+			public const int activity_register = 2131427369;
 			
 			// aapt resource value: 0x7F0B002A
-			public const int activity_register = 2131427370;
+			public const int activity_response = 2131427370;
 			
 			// aapt resource value: 0x7F0B002B
-			public const int activity_response = 2131427371;
+			public const int activity_review = 2131427371;
 			
 			// aapt resource value: 0x7F0B002C
-			public const int activity_review = 2131427372;
+			public const int activity_upload = 2131427372;
 			
 			// aapt resource value: 0x7F0B002D
-			public const int activity_upload = 2131427373;
+			public const int activity_viewattempts = 2131427373;
 			
 			// aapt resource value: 0x7F0B002E
 			public const int Addstudent_layout = 2131427374;

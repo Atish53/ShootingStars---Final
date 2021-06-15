@@ -51,5 +51,10 @@ namespace EntityFramework
         public string CorrectAnswer5 { get; set; }
 
         //public double Duration { get; set; } If we have time left
+
+        public override string ToString()
+        {
+            return string.Format("Date:" + " " + $"{DateAttempted}" + "\n" + "Quiz Attempt ID: " + $"{QuizAttemptID}" + "\n" + "Mark: " + $"{Mark}");
+        }
     }
 }

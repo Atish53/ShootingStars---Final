@@ -44,7 +44,7 @@ namespace PBDE401___ShootingStars
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string db_path = Path.Combine(folderPath, db_name);
 
-            Quiz quiz = DatabaseHelper.ReadSingleQuiz(db_path, 3);
+            Quiz quiz = DatabaseHelper.ReadSingleQuiz(db_path, 1);
 
             q1.Text = quiz.Question1;
             q2.Text = quiz.Question2;
@@ -84,7 +84,7 @@ namespace PBDE401___ShootingStars
                 EditText a4 = FindViewById<EditText>(Resource.Id.quiz_a4);
                 EditText a5 = FindViewById<EditText>(Resource.Id.quiz_a5);
 
-                Quiz quiz = DatabaseHelper.ReadSingleQuiz(db_path, 3);
+                Quiz quiz = DatabaseHelper.ReadSingleQuiz(db_path, 1);
 
                 int count = 0;
                 if (a1.Text == quiz.Answer1)

@@ -6,39 +6,44 @@
   <group android:checkableBehavior="single">
     <item
         android:id="@+id/nav_subjects"
-        android:icon="@drawable/ic_menu_camera"
+        android:icon="@android:drawable/ic_menu_more"
         android:title="Subjects" />
     <item
         android:id="@+id/nav_grades"
-        android:icon="@drawable/ic_menu_gallery"
-        android:title="Grades" />
+        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:title="Quiz Attempts" />
     <item
         android:id="@+id/nav_planner"
         android:icon="@drawable/ic_menu_slideshow"
-        android:title="Planner" />
-    <item
-        android:id="@+id/nav_additionalresources"
-        android:icon="@drawable/ic_menu_manage"
-        android:title="Additional Resources" />
+        android:title="To-Do List" />
   </group>
 
-  <item android:title="Contact Us">
+  <item android:title="Additional Features">
     <menu>
       <item
           android:id="@+id/nav_question"
           android:icon="@drawable/ic_menu_share"
-          android:title="Ask A Question" />
-      <item
-          android:id="@+id/nav_feedback"
-          android:icon="@drawable/ic_menu_send"
-          android:title="Send Us Feedback" />
-    </menu>
-  </item>
- 
+          android:title="Queries" />
+      
       <item
           android:id="@+id/nav_login"
-          android:icon="@drawable/ic_menu_share"
+          android:icon="@android:drawable/ic_menu_preferences"
           android:title="Login" />
+    </menu>
+  </item>
+  <item android:title="Additional Information">
+    <menu>
+      <item
+          android:id="@+id/nav_about"
+          android:icon="@android:drawable/ic_dialog_info"
+          android:title="About Us" />
+      <item
+          android:id="@+id/nav_additionalresources"
+          android:icon="@android:drawable/ic_dialog_map"
+          android:title="Additional Resources" />
+      </menu>
+  
+    </item>
       
 
 

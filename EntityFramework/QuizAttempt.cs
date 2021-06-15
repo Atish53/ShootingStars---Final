@@ -20,7 +20,35 @@ namespace EntityFramework
 
         public DateTime DateAttempted { get; set; }
 
-        public int Mark { get; set; }
+        public double Mark { get; set; }
+
+        public string Question1 { get; set; }
+
+        public string Answer1 { get; set; }
+
+        public string Question2 { get; set; }
+
+        public string Answer2 { get; set; }
+
+        public string Question3 { get; set; }
+
+        public string Answer3 { get; set; }
+
+        public string Question4 { get; set; }
+
+        public string Answer4 { get; set; }
+
+        public string Question5 { get; set; }
+
+        public string Answer5 { get; set; }
+
+        //Correct Answers
+
+        public string CorrectAnswer1 { get; set; }
+        public string CorrectAnswer2 { get; set; }
+        public string CorrectAnswer3 { get; set; }
+        public string CorrectAnswer4 { get; set; }
+        public string CorrectAnswer5 { get; set; }
 
         //public double Duration { get; set; } If we have time left
     }

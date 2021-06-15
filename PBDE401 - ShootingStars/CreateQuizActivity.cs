@@ -20,14 +20,18 @@ namespace PBDE401___ShootingStars
     public class CreateQuizActivity : Activity
     {
         Button createButton;
-        EditText createQuizText, createQuizSubjectID, Q1, A1, Q2, A2, Q3, A3, Q4, A4, Q5, A5;
+        Spinner subjects;
+        EditText createQuizText, Q1, A1, Q2, A2, Q3, A3, Q4, A4, Q5, A5;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.activity_create_quiz); //activity create query layout
+            SetContentView(Resource.Layout.activity_create_quiz); //activity create quiz layout
 
+            string db_name = "students_db.sqlite";
+            string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string db_path = Path.Combine(folderPath, db_name);
             // Create your application here
-            createQuizSubjectID = FindViewById<EditText>(Resource.Id.quiz_subject); //Textbox for subject
+
             createQuizText = FindViewById<EditText>(Resource.Id.quiz_name);
             Q1 = FindViewById<EditText>(Resource.Id.question1);
             A1 = FindViewById<EditText>(Resource.Id.answer1);
@@ -40,11 +44,19 @@ namespace PBDE401___ShootingStars
             Q5 = FindViewById<EditText>(Resource.Id.question5);
             A5 = FindViewById<EditText>(Resource.Id.answer5);
 
+            subjects = FindViewById<Spinner>(Resource.Id.spinner_quizsub);
+            List<Subject> subjectList = DatabaseHelper.ReadSubjects(db_path);
+
+            var adapter = new ArrayAdapter<Subject>(this, Android.Resource.Layout.SimpleSpinnerItem, subjectList);
+            subjects.Adapter = adapter;
+
+            subjects.ItemSelected += (sender, e) =>
+            {                
+                var s = sender as Spinner;
+            };
+
             createButton = FindViewById<Button>(Resource.Id.make_quiz);
-
-            createButton.Click += createQuiz_Click;
-
-    
+            createButton.Click += createQuiz_Click;    
         }
 
         private void createQuiz_Click(object sender, EventArgs e)
@@ -53,10 +65,9 @@ namespace PBDE401___ShootingStars
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string db_path = Path.Combine(folderPath, db_name);
 
-            Quiz quiz = new Quiz();
-            
+            //int SubjectIDs = DatabaseHelper.GetSubjectWithName(db_path, createQuizSubjectID.Text);
 
-            Quiz newQuiz = new Quiz() { QuizName = createQuizText.Text, SubjectID = int.Parse(createQuizSubjectID.Text)};
+            Quiz newQuiz = new Quiz() { QuizName = createQuizText.Text, SubjectID = 1, Answer1 = A1.Text, Answer2 = A2.Text, Answer3 = A3.Text, Answer4 = A4.Text, Answer5 = A5.Text, Question1 = Q1.Text, Question2 = Q2.Text, Question3 = Q3.Text, Question4 = Q4.Text, Question5 = Q5.Text};
             if (DatabaseHelper.Insert(ref newQuiz, db_path)) //Pushes and checks if quiz data has been stored successfully.
             {
                 View view = (View)sender;

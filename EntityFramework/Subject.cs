@@ -24,5 +24,10 @@ namespace EntityFramework
             return string.Format("Subject ID:"+ " " + $"{SubjectID}" + "\n" + "Subject Grade:"+ " " +$"{SubjectName}" + "\n" + "Subject Grade:"+ " " + $"{SubjectGrade}");
         }
 
+        public string getName()
+        {
+            return SubjectName;
+        }
+
     }
 }

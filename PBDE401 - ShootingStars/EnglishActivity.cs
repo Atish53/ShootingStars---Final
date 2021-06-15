@@ -10,6 +10,7 @@ using Android.Support.V4.Content;
 using Android.Views;
 using Android.Widget;
 using EntityFramework;
+using Java.IO;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,6 +24,7 @@ namespace PBDE401___ShootingStars
     { 
         List<SubjectMaterial> subjectMaterials;
         ListView customList;
+        Button quizEnglish;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             string[] perm = new string[] { Manifest.Permission.WriteExternalStorage, Manifest.Permission.WriteExternalStorage };
@@ -32,10 +34,12 @@ namespace PBDE401___ShootingStars
             base.OnCreate(savedInstanceState);
 
             // Create your application here
-
             string db_name = "material_db.sqlite";
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string db_path = System.IO.Path.Combine(folderPath, db_name);
+
+            quizEnglish = FindViewById<Button>(Resource.Id.quiz_english);
+            quizEnglish.Click += QuizEnglish_Click;
 
             subjectMaterials = new List<SubjectMaterial>();
             subjectMaterials = DatabaseHelper.ReadMaterials(db_path);
@@ -47,19 +51,29 @@ namespace PBDE401___ShootingStars
 
         }
 
-        private void CustomList_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        private void QuizEnglish_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(AttemptQuizActivity));
+            StartActivity(intent);
+        }
+
+        private async void CustomList_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             string db_name = "material_db.sqlite";
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string db_path = System.IO.Path.Combine(folderPath, db_name);            
             
-            SubjectMaterial subjectMaterial = DatabaseHelper.ReadSingleMaterials(db_path, "1");
+            SubjectMaterial subjectMaterial = DatabaseHelper.ReadSingleMaterials(db_path, 1);
             byte[] byteArray = subjectMaterial.itemData;
-  
-            string DownloadsPath = System.IO.Path.Combine(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, Android.OS.Environment.DirectoryDownloads);
-            string filePath = System.IO.Path.Combine(DownloadsPath, subjectMaterial.itemName);
-            File.WriteAllBytes(filePath, byteArray);
 
+            //Add confirmation to download + Snackbar notification
+            var filename = System.IO.Path.Combine(Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDocuments).ToString(), "ShootingStars");
+            Directory.CreateDirectory(filename);
+            filename = System.IO.Path.Combine(filename, subjectMaterial.itemName);
+            using (var fileOutputStream = new FileOutputStream(filename))
+            {
+                await fileOutputStream.WriteAsync(byteArray);
+            }
         }
 
         

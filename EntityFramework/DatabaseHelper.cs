@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace EntityFramework
 {
@@ -67,6 +68,8 @@ namespace EntityFramework
             }
             return subjects;
         }
+
+
         //Read Materials
         public static List<SubjectMaterial> ReadMaterials(string db_path)
         {
@@ -89,27 +92,37 @@ namespace EntityFramework
             return student;
         }
 
-        //Find a subject using subject name
-        public static Subject ReadQuiz(string db_path, string name)
+        /*//Find a subject's ID using subject name
+        public static int GetSubjectWithName(string db_path, int id)
         {
             Subject subject  = new Subject();
             using (var conn = new SQLite.SQLiteConnection(db_path))
             {
-                subject = conn.Find<Subject>(s => s.SubjectName == name);
+                subject = conn.Find<Subject>(s => s.SubjectID == id);
             }
-            return subject;
-        }
+            return subject.SubjectID;
+        }*/
 
         //Read a single Material
-        public static SubjectMaterial ReadSingleMaterials(string db_path, string id)
-        {
-            int ids = int.Parse(id);
+        public static SubjectMaterial ReadSingleMaterials(string db_path, int id)
+        {            
             SubjectMaterial subjectMaterial = new SubjectMaterial();
             using (var conn = new SQLite.SQLiteConnection(db_path))
             {
-                subjectMaterial = conn.Find<SubjectMaterial>(i => i.SubjectMaterialID == ids);
+                subjectMaterial = conn.Find<SubjectMaterial>(i => i.SubjectMaterialID == id);
             }
             return subjectMaterial;
+        }
+
+        //Read a single Material
+        public static Quiz ReadSingleQuiz(string db_path, int id)
+        {
+            Quiz quiz = new Quiz();
+            using (var conn = new SQLite.SQLiteConnection(db_path))
+            {
+                quiz = conn.Find<Quiz>(i => i.QuizID == id);
+            }
+            return quiz;
         }
 
 
@@ -151,8 +164,6 @@ namespace EntityFramework
             }
             return studentQueries;
         }
-        */
-
-
+        */      
     }
 }

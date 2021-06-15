@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="ActiveQueriesActivity.cs" />
     <Compile Include="AdminActivity.cs" />
+    <Compile Include="AttemptQuizActivity.cs" />
     <Compile Include="CreateMaterialActivity.cs" />
     <Compile Include="CreateQueryActivity.cs" />
     <Compile Include="CreateQuizActivity.cs" />
@@ -78,8 +79,10 @@
     <Compile Include="ManageQuizActivity.cs" />
     <Compile Include="ManageSubjectsActivity.cs" />
     <Compile Include="MapActivity.cs" />
+    <Compile Include="PlannerActivity.cs" />
     <Compile Include="QueryActivity.cs" />
     <Compile Include="RegisterActivity.cs" />
+    <Compile Include="AboutActivity.cs" />
     <Compile Include="Resources\CreateQuizActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -300,6 +303,32 @@
     <AndroidResource Include="Resources\layout\activity_query_admin.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_attempt_quiz.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_planner.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout1.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-v21\app_about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_about.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-v21\app_background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

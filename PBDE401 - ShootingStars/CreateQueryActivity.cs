@@ -49,8 +49,7 @@ namespace PBDE401___ShootingStars
             if (DatabaseHelper.Insert(ref newQuery, db_path)) //Pushes and checks if query data has been stored successfully.
             {
                 View view = (View)sender;
-                Snackbar.Make(view, "Your query has been noted.", Snackbar.LengthLong)
-                .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
+                Toast.MakeText(Application.Context, "Your query has been created successfully.", ToastLength.Long).Show();
             }
             Finish();
         }

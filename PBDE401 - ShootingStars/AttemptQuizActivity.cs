@@ -107,7 +107,7 @@ namespace PBDE401___ShootingStars
                 {
                     count++;
                 }
-                mark = (count / 5.00);
+                mark = (count / 5.00) * 100;
 
                 QuizAttempt quizAttempt = new QuizAttempt() { StudentID = StudentIDs, QuizID = 3, Mark = mark, Answer1 = a1.Text, Answer2 = a2.Text, Answer3 = a3.Text, Answer4 = a4.Text, Answer5 = a5.Text, DateAttempted = DateTime.Now.Date, CorrectAnswer1 = quiz.Answer1, CorrectAnswer2 = quiz.Answer2, CorrectAnswer3 = quiz.Answer3, CorrectAnswer4 = quiz.Answer4, CorrectAnswer5 = quiz.Answer5, Question1 = quiz.Question1, Question2 = quiz.Question2, Question3 = quiz.Question3, Question4 = quiz.Question4, Question5 = quiz.Question5 };
                 if (DatabaseHelper.Insert(ref quizAttempt, db_path)) //Pushes and checks if quiz attempt data has been stored successfully.

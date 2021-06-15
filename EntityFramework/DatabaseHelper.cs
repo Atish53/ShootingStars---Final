@@ -161,7 +161,7 @@ namespace EntityFramework
             QuizAttempt quizAttempt = new QuizAttempt();
             using (var conn = new SQLite.SQLiteConnection(db_path))
             {
-                quizAttempt = conn.Find<QuizAttempt>(i => i.QuizID == id);
+                quizAttempt = conn.Find<QuizAttempt>(i => i.QuizAttemptID == id);
             }
             return quizAttempt;
         }

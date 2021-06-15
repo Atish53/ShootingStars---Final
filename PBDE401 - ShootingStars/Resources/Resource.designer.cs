@@ -3306,35 +3306,35 @@ namespace PBDE401___ShootingStars
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7F080006
-			public const int a1 = 2131230726;
-			
 			// aapt resource value: 0x7F080007
-			public const int a1c = 2131230727;
+			public const int a1c_q = 2131230727;
 			
-			// aapt resource value: 0x7F080008
-			public const int a2 = 2131230728;
+			// aapt resource value: 0x7F080006
+			public const int a1_q = 2131230726;
 			
 			// aapt resource value: 0x7F080009
-			public const int a2c = 2131230729;
+			public const int a2c_q = 2131230729;
 			
-			// aapt resource value: 0x7F08000A
-			public const int a3 = 2131230730;
+			// aapt resource value: 0x7F080008
+			public const int a2_q = 2131230728;
 			
 			// aapt resource value: 0x7F08000B
-			public const int a3c = 2131230731;
+			public const int a3c_q = 2131230731;
 			
-			// aapt resource value: 0x7F08000C
-			public const int a4 = 2131230732;
+			// aapt resource value: 0x7F08000A
+			public const int a3_q = 2131230730;
 			
 			// aapt resource value: 0x7F08000D
-			public const int a4c = 2131230733;
+			public const int a4c_q = 2131230733;
 			
-			// aapt resource value: 0x7F08000E
-			public const int a5 = 2131230734;
+			// aapt resource value: 0x7F08000C
+			public const int a4_q = 2131230732;
 			
 			// aapt resource value: 0x7F08000F
-			public const int a5c = 2131230735;
+			public const int a5c_q = 2131230735;
+			
+			// aapt resource value: 0x7F08000E
+			public const int a5_q = 2131230734;
 			
 			// aapt resource value: 0x7F080022
 			public const int actions = 2131230754;
@@ -3883,19 +3883,19 @@ namespace PBDE401___ShootingStars
 			public const int progress_horizontal = 2131230913;
 			
 			// aapt resource value: 0x7F0800C2
-			public const int q1 = 2131230914;
+			public const int q1_q = 2131230914;
 			
 			// aapt resource value: 0x7F0800C3
-			public const int q2 = 2131230915;
+			public const int q2_q = 2131230915;
 			
 			// aapt resource value: 0x7F0800C4
-			public const int q3 = 2131230916;
+			public const int q3_q = 2131230916;
 			
 			// aapt resource value: 0x7F0800C5
-			public const int q4 = 2131230917;
+			public const int q4_q = 2131230917;
 			
 			// aapt resource value: 0x7F0800C6
-			public const int q5 = 2131230918;
+			public const int q5_q = 2131230918;
 			
 			// aapt resource value: 0x7F0800C7
 			public const int query_text = 2131230919;

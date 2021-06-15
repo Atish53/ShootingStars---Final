@@ -125,6 +125,17 @@ namespace EntityFramework
             return query;
         }
 
+        //Read a single quizAttempt
+        public static QuizAttempt ReadSingleQuizAttempt(string db_path, int id)
+        {
+            QuizAttempt quizAttempt = new QuizAttempt();
+            using (var conn = new SQLite.SQLiteConnection(db_path))
+            {
+                quizAttempt = conn.Find<QuizAttempt>(i => i.QuizID == id);
+            }
+            return quizAttempt;
+        }
+
         //Read a single Material
         public static Quiz ReadSingleQuiz(string db_path, int id)
         {

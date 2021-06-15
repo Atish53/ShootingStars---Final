@@ -114,6 +114,17 @@ namespace EntityFramework
             return subjectMaterial;
         }
 
+        //Read a single query
+        public static Query ReadSingleQuery(string db_path, int id)
+        {
+            Query query = new Query();
+            using (var conn = new SQLite.SQLiteConnection(db_path))
+            {
+                query = conn.Find<Query>(i => i.QueryID == id);
+            }
+            return query;
+        }
+
         //Read a single Material
         public static Quiz ReadSingleQuiz(string db_path, int id)
         {
@@ -137,13 +148,14 @@ namespace EntityFramework
         }
 
         //Update Response From Admin 
-        public static bool UpdateQuery(string db_path, int queryId, string response)
+        public static bool UpdateQuery(string db_path, int queryId, string response, bool status)
         {
             Query query = new Query();
             using (var conn = new SQLite.SQLiteConnection(db_path))
             {
                 query = conn.Find<Query>(i => i.QueryID == queryId);
                 query.Response = response;
+                query.Status = status;
                 conn.Update(query);
             }
             return true;

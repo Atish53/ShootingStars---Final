@@ -76,7 +76,6 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="ManageMaterialsActivity.cs" />
     <Compile Include="ManageQueriesActivity.cs" />
-    <Compile Include="ManageQuizActivity.cs" />
     <Compile Include="ManageSubjectsActivity.cs" />
     <Compile Include="MapActivity.cs" />
     <Compile Include="PlannerActivity.cs" />
@@ -86,7 +85,9 @@
     <Compile Include="Resources\CreateQuizActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseActivity.cs" />
     <Compile Include="StudentActivity.cs" />
+    <Compile Include="StudentQuizReviewActivity.cs" />
     <Compile Include="SubjectsActivity.cs" />
     <Compile Include="ViewMaterialsAdmin.cs" />
     <Compile Include="ViewQueriesAdmin.cs" />
@@ -156,6 +157,9 @@
     </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.7.335</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.Pdf">
+      <Version>19.1.0.69</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.3" />
@@ -329,6 +333,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-v21\app_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_response.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_review.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

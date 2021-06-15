@@ -12,8 +12,8 @@ using Android.Widget;
 
 namespace PBDE401___ShootingStars
 {
-    [Activity(Label = "ManageQuizActivity")]
-    public class ManageQuizActivity : Activity
+    [Activity(Label = "StudentQuizReviewActivity")]
+    public class StudentQuizReviewActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {

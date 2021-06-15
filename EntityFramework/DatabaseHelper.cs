@@ -125,6 +125,29 @@ namespace EntityFramework
             return quiz;
         }
 
+        //Complete Query From Admin
+        public static bool CompleteQuery(string db_path, int queryId)
+        {
+            Query query = new Query();
+            using (var conn = new SQLite.SQLiteConnection(db_path))
+            {
+                query = conn.Find<Query>(i => i.QueryID == queryId);
+            }
+            return true;
+        }
+
+        //Update Response From Admin 
+        public static bool UpdateQuery(string db_path, int queryId, string response)
+        {
+            Query query = new Query();
+            using (var conn = new SQLite.SQLiteConnection(db_path))
+            {
+                query = conn.Find<Query>(i => i.QueryID == queryId);
+                query.Response = response;
+                conn.Update(query);
+            }
+            return true;
+        }
 
         public static string CheckLogin(string db_path, string email, string password)
         {
